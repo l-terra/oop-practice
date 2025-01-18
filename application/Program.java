@@ -13,17 +13,16 @@ public class Program
 
         System.out.println("Enter product data");
 
-        Product p;
-        p = new Product();
-
         System.out.print("Name: ");
-        p.name = sc.nextLine();
+        String name = sc.nextLine();
 
         System.out.print("Price: ");
-        p.price = sc.nextDouble();
+        double price = sc.nextDouble();
 
-        System.out.print("Quantity in stock: ");
-        p.quantity = sc.nextInt();
+        Product p = new Product(name,price);
+
+        p.setName(name);
+        p.setPrice(price);
 
         double total = p.totalValueInStock();
 
